@@ -16,49 +16,55 @@
 </script>
 	<script>
 
-    gtag("event", "purchase", {
+  window.dataLayer = window.dataLayer || [];
 
-        transaction_id: "T_12345_1",
+  window.dataLayer.push({
 
-        value: 90.00,
+    event: "purchase",
 
-        tax: 4.90,
+    ecommerce: {
 
-        shipping: 5.99,
+      transaction_id: "SRFC20250309",  // Remplace par un vrai ID dynamique
 
-        currency: "USD",
+      affiliation: "Boutique Officielle Stade Rennais",
 
-        coupon: "SUMMER_SALE",
+      value: 90.00,  // Prix total de la commande
 
-        items: [
+      currency: "EUR",
 
-        // If someone purchases more than one item,
+      tax: 14.99,  // Exemple de TVA (ajuste selon ton taux réel)
 
-        // you can add those items to the items array
+      shipping: 5.99,  // Frais de livraison (modifie si besoin)
 
-         {
+      coupon: "",  // Si un code promo est utilisé, mets-le ici
 
-          item_id: "SKU_12345",
+      items: [
 
-          item_brand: "SRFC",
+        {
 
-          item_category: "Maillot",
+          item_name: "Maillot Stade Rennais Domicile 2024/2025",
 
-          item_category2: "Adulte",
-
-          item_category3: "Rouge",
-
-         
+          item_id: "SRFC-MA-2025",
 
           price: 90.00,
 
-          quantity: 1
+          quantity: 1,
 
-        }]
+          item_category: "Maillots",
 
-    });
+          item_brand: "Puma",
 
-    </script>
+          item_variant: "M",  // Ajuste selon la taille choisie
+
+        }
+
+      ]
+
+    }
+
+  });
+
+</script>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
